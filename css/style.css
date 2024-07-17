@@ -87,7 +87,8 @@ body {
 }
 
 .logo-box span {
-  font-size: 22px;
+  font-size: 2px;
+
   font-weight: bold;
   color: #0a0057;
   font-family: "Roboto", sans-serif;
@@ -533,8 +534,12 @@ a:focus {
   background-image: url(../images/hbg-3.png);
 }
 
+
 .service_img-box img {
-  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
 }
 
 .service-btn,
