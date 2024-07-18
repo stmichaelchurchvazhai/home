@@ -1342,6 +1342,11 @@ a {
 }
 .cid-uiQCEUHWL3 {
   display: flex;
+  background-image: url("../../../assets/images/ph7-2000x904.jpg");
+}
+.cid-uiQCEUHWL3 .mbr-overlay {
+  background-color: #000000;
+  opacity: 0.5;
 }
 @media (min-width: 768px) {
   .cid-uiQCEUHWL3 {
@@ -1383,7 +1388,6 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-  background-image: url("../../../assets/images/ph7-2000x904.jpg");
 }
 .cid-uiQCEUHWL3 .mbr-section-title,
 .cid-uiQCEUHWL3 .mbr-section-subtitle {
@@ -1712,10 +1716,6 @@ a {
 .cid-uiQCEUJcuQ .content-head {
   max-width: 800px;
 }
-.cid-uiQCEUJ6Jo {
-  background-image: url("../../../assets/images/ph7-2000x904.jpg");
-  overflow: hidden;
-}
 .cid-uiQCEUJpIf {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -1797,6 +1797,60 @@ a {
 }
 .cid-uiQCEUJpIf .grid-container-2 {
   align-items: flex-start;
+}
+.cid-uiT6rIAHsl {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .cid-uiT6rIAHsl {
+    align-items: flex-end;
+  }
+  .cid-uiT6rIAHsl .row {
+    justify-content: flex-start;
+  }
+  .cid-uiT6rIAHsl .content-wrap {
+    padding: 1rem 3rem;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .cid-uiT6rIAHsl .content-wrap {
+    min-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cid-uiT6rIAHsl {
+    -webkit-align-items: center;
+    align-items: flex-end;
+  }
+  .cid-uiT6rIAHsl .mbr-row {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .cid-uiT6rIAHsl .content-wrap {
+    width: 100%;
+  }
+}
+.cid-uiT6rIAHsl .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-uiT6rIAHsl .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url("../../../assets/images/ph7-2000x904.jpg");
+}
+.cid-uiT6rIAHsl .mbr-section-title,
+.cid-uiT6rIAHsl .mbr-section-subtitle {
+  text-align: left;
+  color: #ffc091;
+}
+.cid-uiT6rIAHsl .mbr-text,
+.cid-uiT6rIAHsl .mbr-section-btn {
+  text-align: left;
 }
 .cid-uiQCEUKQiC {
   padding-top: 6rem;
