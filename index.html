@@ -24,6 +24,10 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;700&display=swap&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=kg9hGd"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=kg9hGd" type="text/css">
 
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
   <style>
     .modern-list {
         font-family: 'Roboto', sans-serif;
@@ -47,6 +51,35 @@
         position: absolute;
         left: 0;
         top: 0;
+    }
+  /* Flashing animation for the download link */
+  @keyframes flash {
+        0% {
+            background-color: red;
+            color: white;
+        }
+        50% {
+            background-color: yellow;
+            color: red;
+        }
+        100% {
+            background-color: red;
+            color: white;
+        }
+    }
+
+    .alert-download a {
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+        animation: flash 1s infinite; /* Flash animation that alternates every 1 second */
+        text-decoration: none;
+    }
+
+    .alert-download a:hover {
+        text-decoration: underline;
+        background-color: darkred; /* Changes to dark red when hovered */
+        color: white;
     }
 </style>
   
@@ -101,6 +134,7 @@
 	</nav>
 </section>
 
+
 <section data-bs-version="5.1" class="header18 cid-uiQCEUHWL3 mbr-fullscreen mbr-parallax-background" id="hero-15-uiQCEUHWL3">
   
 
@@ -112,10 +146,17 @@
           <strong>St. Michael The Archangel's Church,<br> Vazhaithottam...</strong></h1>
         
         <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">“நீர் செல்லும் இடமெல்லாம் உன்னைக் காக்கும்படி, தம் தூதர்க்கு அவர் கட்டளையிடுவார். அவர்கள் தங்கள் கைகளில் உம்மைத் தாங்கிக்கொள்வர்.” <br>(திபா 91:11-12)</p>
-        
+        <div class="alert-download">
+          <i class="fas fa-exclamation-circle alert-icon"></i>
+          <a href="assets/files/FeastInvitation.pdf" download>Download Feast Invitation</a>
+        </div>
       </div>
+       <!-- Red Alert Icon for Feast Invitation Download -->
+     
+
     </div>
   </div>
+
 </section>
 <section data-bs-version="5.1" class="article2 cid-uiQCEUIg7f" id="about-me-2-uiQCEUIg7f">
 
