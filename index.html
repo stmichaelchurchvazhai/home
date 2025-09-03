@@ -33,14 +33,14 @@
 
 
 
-  <!-- <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  -->
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script> 
   <script src="assets/parallax/jarallax.js"></script>  
   <script src="assets/smoothscroll/smooth-scroll.js"></script>  
   <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  
   <script src="assets/scrollgallery/scroll-gallery.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  
   <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>  
   <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
-  
+  <script src="assets/countdown/countdown.js"></script>
   
   
   <style>
@@ -110,6 +110,31 @@
   .feature-card .gallery img { width:100%; height:auto; border-radius:12px; box-shadow:0 6px 14px rgba(0,0,0,0.07); transition: transform .25s ease; }
   .feature-card .gallery img:hover { transform: scale(1.02); }
   @media (max-width: 767.98px) { .feature-card { padding:20px; } }
+  /* About section - modern card */
+  .about-card { background:#ffffff; border-radius:18px; box-shadow:0 14px 32px rgba(0,0,0,0.08); padding:32px; position:relative; overflow:hidden; }
+  .about-card::before { content:""; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#e5c674,#f1e2b8,#e5c674); }
+  .about-title { color:#1f5133; }
+  .about-img { border-radius:16px; box-shadow:0 12px 28px rgba(0,0,0,0.15); }
+  @media (max-width: 767.98px) { .about-card { padding:20px; } }
+  /* Modern timings cards */
+  .timings-grid .timing-card { background:#ffffff; border-radius:18px; box-shadow:0 10px 26px rgba(0,0,0,0.08); padding:26px; height:100%; text-align:center; position:relative; overflow:hidden; border:1px solid rgba(0,0,0,0.04); }
+  .timings-grid .timing-card::before { content:""; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#e5c674,#f1e2b8,#e5c674); }
+  .timings-grid .timing-emblem { width:44px; height:44px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#f9e7bb,#f3d180); color:#7a5c1e; margin-bottom:14px; box-shadow:0 8px 18px rgba(229,198,116,0.35); }
+  .timings-grid .timing-title { font-weight:800; color:#9b0b55; }
+  .timings-grid .timing-sub { color:#444; margin-top:6px; }
+  @media (max-width: 767.98px) { .timings-grid .timing-card { padding:18px; } }
+  /* Churches gallery - modern layout */
+  .churches-section { background: #fafbfc; padding: 60px 0; }
+  .church-card { background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%); border-radius:24px; box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 8px 20px rgba(0,0,0,0.05); padding:40px; margin-bottom:50px; position:relative; border: 1px solid rgba(255,255,255,0.8); }
+  .church-card::before { content:""; position:absolute; top:-2px; left:-2px; right:-2px; bottom:-2px; background: linear-gradient(45deg, #e5c674, #f1e2b8, #e5c674, #f1e2b8); border-radius:26px; z-index:-1; }
+  .church-title { color:#2c3e50; margin-bottom:12px; font-weight:700; letter-spacing:-0.5px; }
+  .church-subtitle { color:#7f8c8d; margin-bottom:32px; font-weight:400; }
+  .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; }
+  .gallery-item { position:relative; border-radius:20px; overflow:hidden; box-shadow:0 12px 32px rgba(0,0,0,0.15); transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1); background:#fff; }
+  .gallery-item:hover { transform:translateY(-8px) scale(1.02); box-shadow:0 20px 50px rgba(0,0,0,0.2); }
+  .gallery-item img { width:100%; height:280px; object-fit:cover; transition:transform 0.4s ease; }
+  .gallery-item:hover img { transform:scale(1.05); }
+  @media (max-width: 767.98px) { .church-card { padding:24px; margin-bottom:40px; } .gallery-grid { grid-template-columns:1fr; gap:16px; } }
 </style>
 
 <style>
@@ -225,9 +250,179 @@
     .feast-section .countdown .row { gap: 16px; }
     .feast-section .countdown .col-3 { padding: 6px 12px; }
   }
-  /* Hidden placeholders for countdown script */
-  .countdown-placeholders { display: none; }
-</style>
+     /* Hidden placeholders for countdown script */
+   .countdown-placeholders { display: none; }
+   
+   /* Virtual Tour Section - Modern Elegant Design */
+   .virtual-tour-section { 
+     position: relative; 
+     min-height: 100vh; 
+     display: flex; 
+     align-items: center; 
+     background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
+     overflow: hidden;
+   }
+   .virtual-tour-section::before { 
+     content: ""; 
+     position: absolute; 
+     top: 0; 
+     left: 0; 
+     right: 0; 
+     bottom: 0; 
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.02)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>'); 
+     opacity: 0.3; 
+   }
+   .virtual-tour-section .mbr-overlay { 
+     background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%); 
+   }
+   .virtual-tour-content { 
+     position: relative; 
+     z-index: 2; 
+   }
+   .tour-badge { 
+     display: inline-block; 
+     margin-bottom: 2rem; 
+   }
+   .badge-text { 
+     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
+     color: #2c3e50; 
+     padding: 8px 24px; 
+     border-radius: 25px; 
+     font-size: 0.9rem; 
+     font-weight: 600; 
+     letter-spacing: 1px; 
+     text-transform: uppercase; 
+     box-shadow: 0 4px 15px rgba(229,198,116,0.3); 
+   }
+   .tour-main-title { 
+     color: #ffffff; 
+     font-weight: 800; 
+     letter-spacing: -2px; 
+     text-shadow: 0 6px 30px rgba(0,0,0,0.7); 
+     margin-bottom: 1.5rem; 
+     line-height: 1.1; 
+   }
+   .title-line-1 { 
+     display: block; 
+     font-size: 3.5rem; 
+     margin-bottom: 0.5rem; 
+   }
+   .title-line-2 { 
+     display: block; 
+     font-size: 4rem; 
+     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
+     -webkit-background-clip: text; 
+     -webkit-text-fill-color: transparent; 
+     background-clip: text; 
+   }
+   .tour-subtitle { 
+     color: #e8f4f8; 
+     font-size: 1.3rem; 
+     font-weight: 400; 
+     line-height: 1.6; 
+     margin-bottom: 3rem; 
+     text-shadow: 0 2px 10px rgba(0,0,0,0.5); 
+     max-width: 600px; 
+     margin-left: auto; 
+     margin-right: auto; 
+   }
+   .tour-locations { 
+     display: grid; 
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+     gap: 2rem; 
+     margin-bottom: 3rem; 
+     max-width: 900px; 
+     margin-left: auto; 
+     margin-right: auto; 
+   }
+   .location-item { 
+     background: rgba(255,255,255,0.1); 
+     backdrop-filter: blur(10px); 
+     border-radius: 20px; 
+     padding: 2rem; 
+     text-align: center; 
+     border: 1px solid rgba(255,255,255,0.2); 
+     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+     position: relative; 
+     overflow: hidden; 
+   }
+   .location-item::before { 
+     content: ""; 
+     position: absolute; 
+     top: 0; 
+     left: 0; 
+     right: 0; 
+     height: 3px; 
+     background: linear-gradient(90deg, #e5c674, #f1e2b8, #e5c674); 
+   }
+   .location-item:hover { 
+     transform: translateY(-10px); 
+     background: rgba(255,255,255,0.15); 
+     box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+   }
+   .location-icon { 
+     width: 60px; 
+     height: 60px; 
+     border-radius: 15px; 
+     display: inline-flex; 
+     align-items: center; 
+     justify-content: center; 
+     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
+     color: #2c3e50; 
+     margin-bottom: 1rem; 
+     box-shadow: 0 8px 20px rgba(229,198,116,0.4); 
+     font-size: 1.5rem; 
+   }
+   .location-name { 
+     color: #ffffff; 
+     font-size: 1.3rem; 
+     font-weight: 700; 
+     margin-bottom: 0.5rem; 
+   }
+   .location-desc { 
+     color: #b8d4e3; 
+     font-size: 0.95rem; 
+     line-height: 1.5; 
+   }
+   .btn-tour-start { 
+     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
+     color: #2c3e50; 
+     border: none; 
+     border-radius: 50px; 
+     padding: 18px 36px; 
+     font-size: 1.1rem; 
+     font-weight: 600; 
+     display: inline-flex; 
+     align-items: center; 
+     gap: 12px; 
+     box-shadow: 0 8px 25px rgba(229,198,116,0.4); 
+     transition: all 0.3s ease; 
+     cursor: pointer; 
+     text-decoration: none; 
+   }
+   .btn-tour-start:hover { 
+     transform: translateY(-3px); 
+     box-shadow: 0 12px 35px rgba(229,198,116,0.5); 
+     color: #2c3e50; 
+     text-decoration: none; 
+   }
+   .btn-icon { 
+     width: 24px; 
+     height: 24px; 
+     display: flex; 
+     align-items: center; 
+     justify-content: center; 
+   }
+   @media (max-width: 767.98px) { 
+     .virtual-tour-section { min-height: 80vh; } 
+     .title-line-1 { font-size: 2.5rem; } 
+     .title-line-2 { font-size: 3rem; } 
+     .tour-subtitle { font-size: 1.1rem; } 
+     .tour-locations { grid-template-columns: 1fr; gap: 1.5rem; } 
+     .location-item { padding: 1.5rem; } 
+     .btn-tour-start { padding: 16px 32px; font-size: 1rem; } 
+   }
+ </style>
 
 
   
@@ -310,25 +505,18 @@
 
 </section>
 <section data-bs-version="5.1" class="article2 cid-uiQCEUIg7f" id="about-me-2-uiQCEUIg7f">
-
-
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-12 col-lg-6 image-wrapper">
-				<img class="w-100" src="assets/images/ph31-720x1207.jpg" alt="St. Michael's image valaithottam">
-			</div>
-			<div class="col-12 col-md-12 col-lg">
-				<div class="text-wrapper align-left">
-					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-						<strong>St. Michael :  “Who is like unto God?”</strong>
-					</h1>
-					<p class="mbr-text align-left mbr-fonts-style mb-3 display-7">விண்ணுலகில் நவ விலாச வான் தூதர்களின் தலைவர் புனித மிக்கேல். உலகம் படைக்கப்படும் முன்னர் தூதர்களின் விடிவெள்ளி என அழைக்கப்பட்டவன் லூசிபர்.</p>
-
-					<p class="mbr-text align-left mbr-fonts-style mb-3 display-7">உலகிற்கு மீட்பர் தேவை மீட்பது தன் மைந்தன் என இறைவன் திருவுளமானார் அதிதூதராக தான் இருக்க. மனுவுரு எடுக்கும் மீட்பரை அராதிக்கமட்டேன் என்ற இறுமாப்பு லூசிபரில் எழுந்தது.</p>
-
-					<p class="mbr-text align-left mbr-fonts-style mb-3 display-7"> அகங்காரம் கொண்டான் ஆணவத்தால் தேவனையே எதிர்த்தான். நல்வழி காட்ட மிக்கேல் அதிதூதர் விரைந்தார். அவரின் நல்லுரைகளை உதறித்தள்ளினான் லூசிபர்...</p>
-          <div class="mbr-section-btn mt-4"><a class="btn btn-primary display-7" href="info.html">Read More</a></div>
-					
+		<div class="about-card">
+			<div class="row align-items-center g-4">
+				<div class="col-12 col-md-6">
+					<img class="w-100 about-img" src="assets/images/ph31-720x1207.jpg" alt="St. Michael's image valaithottam">
+				</div>
+				<div class="col-12 col-md-6">
+					<h1 class="mbr-section-title mbr-fonts-style mb-3 display-2 about-title"><strong>St. Michael: “Who is like unto God?”</strong></h1>
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">விண்ணுலகில் நவ விலாச வான் தூதர்களின் தலைவர் புனித மிக்கேல். உலகம் படைக்கப்படும் முன்னர் தூதர்களின் விடிவெள்ளி என அழைக்கப்பட்டவன் லூசிபர்.</p>
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">உலகிற்கு மீட்பர் தேவை மீட்பது தன் மைந்தன் என இறைவன் திருவுளமானார் அதிதூதராக தான் இருக்க. மனுவுரு எடுக்கும் மீட்பரை அராதிக்கமட்டேன் என்ற இறுமாப்பு லூசிபரில் எழுந்தது.</p>
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">அகங்காரம் கொண்டான் ஆணவத்தால் தேவனையே எதிர்த்தான். நல்வழி காட்ட மிக்கேல் அதிதூதர் விரைந்தார். அவரின் நல்லுரைகளை உதறித்தள்ளினான் லூசிபர்...</p>
+					<div class="mbr-section-btn mt-3 text-center"><a class="btn btn-primary display-7" href="info.html">Read More</a></div>
 				</div>
 			</div>
 		</div>
@@ -336,51 +524,36 @@
 </section>
 
 <section data-bs-version="5.1" class="features023 cid-uiQCEUIKAH" id="metrics-1-uiQCEUIKAH">
-
-    
-
-    
-    
-  <div class="container">
-      
-      <div class="row content-row justify-content-center">
-          <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-              <div class="item-wrapper">
-                  <div class="title mb-2 mb-md-3">
-                      <span class="num mbr-fonts-style display-1">
-                          <strong>Sun-Sat 8AM-9PM<br> </strong></span>
-                  </div>
-                  <h4 class="card-title mbr-fonts-style display-5">
-                      <strong>Church Doors<br> Open Time</strong>
-                  </h4>
-                  
-              </div>
+  <div class="container timings-grid">
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="timing-card">
+          <div class="timing-emblem">
+            <i class="fas fa-cross"></i>
           </div>
-          <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-              <div class="item-wrapper">
-                  <div class="title mb-2 mb-md-3">
-                      <span class="num mbr-fonts-style display-1">
-                          <strong>Sunday 6AM or 6.30 PM</strong></span>
-                  </div>
-                  <h4 class="card-title mbr-fonts-style display-5">
-                      <strong>Mass Timings</strong>
-                  </h4>
-                  
-              </div>
-          </div>
-          <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-              <div class="item-wrapper">
-                  <div class="title mb-2 mb-md-3">
-                      <span class="num mbr-fonts-style display-1">
-                          <strong>First Sunday<br>of Every Month </strong></span>
-                  </div>
-                  <h4 class="card-title mbr-fonts-style display-5">
-                      <strong>Monthly Events</strong>
-                  </h4>
-                  
-              </div>
-          </div>
+          <div class="timing-title mbr-fonts-style display-5">Sun–Sat 8AM–9PM</div>
+          <div class="timing-sub mbr-fonts-style display-7">Church doors open time</div>
+        </div>
       </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="timing-card">
+          <div class="timing-emblem">
+            <i class="fas fa-church"></i>
+          </div>
+          <div class="timing-title mbr-fonts-style display-5">Sunday 6AM or 6:30PM</div>
+          <div class="timing-sub mbr-fonts-style display-7">Mass timings</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="timing-card">
+          <div class="timing-emblem">
+            <i class="fas fa-dove"></i>
+          </div>
+          <div class="timing-title mbr-fonts-style display-5">First Sunday</div>
+          <div class="timing-sub mbr-fonts-style display-7">Of every month – monthly events</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -414,7 +587,7 @@
             <b>பங்கு:</b> புனித பிரகாசியம்மாள் திருத்தலம், அணைக்கரை<br> </p>
             
             <p class="mbr-text mbr-fonts-style mb-3 display-7"><b>பங்குதந்தை:</b><br> அருள்பணி. நெல்சன் பால்ராஜ்<br>
-            <b>உதவி பங்குத்தந்தை: </b><br>அருள்பணி. கே.செ.பிரவீன் ராசு <br> </p>
+            <!-- <b>உதவி பங்குத்தந்தை: </b><br>அருள்பணி. கே.செ.பிரவீன் ராசு <br>--> </p> 
            
             
 				
@@ -429,39 +602,41 @@
 
 
 
-<section data-bs-version="5.1" class="header12 cid-uiQCEUIjX4" id="call-to-action-8-uiQCEUIjX4">    
-
-  <div class="text-center container">
-    <div class="row justify-content-center">
-      <div class="col-md-12 content-head">
-          <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-              <strong>St. Anthony's Church, Vazhai</strong>
-          </h1>
-          <p class="mbr-text mbr-fonts-style mb-4 display-7"> எங்கள் ஊர் இணைப் பாதுகாவலர்</p>
-          <!-- <div class="mbr-section-btn mt-4"><a class="btn btn-primary display-7" href="https://mobiri.se">Explore Now</a></div> -->
-      </div>
-  </div>
-      <div class="row mb-4 justify-content-center">
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-              <img class="img-fluid" src="assets/images/anto1.jpg" alt="St.Anthony">
-          </div>
-          <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <img class="img-fluid" src="assets/images/anto2.jpg" alt="St.Anthony">
+<section data-bs-version="5.1" class="header12 cid-uiQCEUIjX4 churches-section" id="call-to-action-8-uiQCEUIjX4">
+  <div class="container">
+    <!-- St. Anthony's Church -->
+    <div class="church-card">
+      <h1 class="mbr-section-title mbr-fonts-style mb-2 display-2 church-title text-center">
+        <strong>St. Anthony's Church, Vazhai</strong>
+      </h1>
+      <p class="mbr-text mbr-fonts-style mb-4 display-7 church-subtitle text-center">எங்கள் ஊர் இணைப் பாதுகாவலர்</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/anto1.jpg" alt="St. Anthony Church">
         </div>
-        <div class="col-12 col-md-4 mb-4 mb-md-0">
-          <img class="img-fluid" src="assets/images/anto8.jpg" alt="St.Anthony">
+        <div class="gallery-item">
+          <img src="assets/images/anto2.jpg" alt="St. Anthony Church">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/anto8.jpg" alt="St. Anthony Church">
+        </div>
       </div>
-      <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-        <strong><br>JebaMalai Madha Grotto, Vazhai</strong>
-    </h1>
-      <div class="col-12 col-md-4 mb-4 mb-md-0">
-        <img class="img-fluid" src="assets/images/madha1.jpg" alt="JebaMalai Madha">
     </div>
-    <div class="col-12 col-md-4 mb-4 mb-md-0">
-      <img class="img-fluid" src="assets/images/madha2.jpg" alt="JebaMalai Madha">
-  </div>
+
+    <!-- JebaMalai Madha Grotto -->
+    <div class="church-card">
+      <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2 church-title text-center">
+        <strong>JebaMalai Madha Grotto, Vazhai</strong>
+      </h1>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/madha4.png" alt="JebaMalai Madha Grotto">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/KebiPhoto.jpg" alt="JebaMalai Madha Grotto">
+        </div>
       </div>
-      
+    </div>
   </div>
 </section>
 
@@ -515,26 +690,34 @@
 
 
 
-
-<section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="index.html" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="index.html"></a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/countdown/countdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
+<script src="assets/countdown/countdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
 
 
-<section data-bs-version="5.1" class="header18 cid-uiT6rIAHsl mbr-fullscreen" data-bg-video="https://youtu.be/3wNQ7ymyofw?si=M2rSo3M3vIJFFrfR" id="header18-8">
-  
 
-  <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);"></div>
+
+<section data-bs-version="5.1" class="header18 cid-uiT6rIAHsl virtual-tour-section mbr-fullscreen" data-bg-video="https://youtu.be/3wNQ7ymyofw?si=M2rSo3M3vIJFFrfR" id="header18-8">
+  <div class="mbr-overlay"></div>
   <div class="container-fluid">
-    <div class="row">
-      <div class="content-wrap col-12 col-md-7">
-        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
-          <strong>Have a Virtual Tour Of Our Churches</strong>
-        </h1>
-        <ul class="modern-list mbr-fonts-style mbr-white mb-4 display-7">
-          <li>St. Michael Church</li>
-          <li>St. Anthony Church</li>
-          <li>St. JebaMalai Madha Grotto</li>
-        </ul>
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-12 col-lg-10">
+        <div class="virtual-tour-content text-center">
+          <div class="tour-badge mb-4">
+            <span class="badge-text">Virtual Experience</span>
+          </div>
+          <h1 class="tour-main-title mbr-fonts-style mb-4 display-1">
+            <span class="title-line-1">Explore Our</span>
+            <span class="title-line-2">Sacred Churches</span>
+          </h1>
+          <p class="tour-subtitle mbr-fonts-style mb-5 display-6">
+            Immerse yourself in the spiritual beauty of our churches through a virtual journey
+          </p>
+          <ul class="tour-list modern-list">
+            <li>St. Michael Church</li>
+            <li>St. Anthony Church</li>
+            <li>JebaMalai Madha Grotto</li>
+          </ul>
+         
+        </div>
       </div>
     </div>
   </div>
