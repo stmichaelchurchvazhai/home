@@ -25,6 +25,7 @@
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=kg9hGd"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=kg9hGd" type="text/css">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=Zin1ye"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=Zin1ye" type="text/css">
 
+  <link rel="stylesheet" href="assets/styles/mystyles.css">
   <!-- FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -32,7 +33,7 @@
 
 
 
-
+  
   <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script> 
   <script src="assets/parallax/jarallax.js"></script>  
   <script src="assets/smoothscroll/smooth-scroll.js"></script>  
@@ -42,387 +43,7 @@
   <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
   <script src="assets/countdown/countdown.js"></script>
   
-  
-  <style>
-    .modern-list {
-        font-family: 'Roboto', sans-serif;
-        color: #f0e6e6;
-        font-size: 1.2rem;
-    }
-
-    .modern-list li {
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 25px;
-    }
-
-    .modern-list li::before {
-        content: '\2022';
-        color: #ff6347;
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-  /* Flashing animation for the download link */
-  @keyframes flash {
-        0% {
-            background-color: red;
-            color: white;
-        }
-        50% {
-            background-color: yellow;
-            color: red;
-        }
-        100% {
-            background-color: red;
-            color: white;
-        }
-    }
-
-    .alert-download a {
-        font-weight: bold;
-        padding: 5px 10px;
-        border-radius: 5px;
-        animation: flash 1s infinite; /* Flash animation that alternates every 1 second */
-        text-decoration: none;
-    }
-
-    .alert-download a:hover {
-        text-decoration: underline;
-        background-color: darkred; /* Changes to dark red when hovered */
-        color: white;
-    }
-
-    /* Applying the blinking effect to the feast title */
-    .feast-title {
-        animation: flash 5s infinite;
-        padding: 10px;
-        /* background-color: rgb(13, 196, 35); */
-        border-radius: 10px;
-        text-align: center;
-    }
-  /* Modern card + gallery styling for facilities section */
-  .feature-card { background:#ffffff; border-radius:16px; box-shadow:0 10px 24px rgba(0,0,0,0.08); padding:32px; }
-  .feature-card .gallery img { width:100%; height:auto; border-radius:12px; box-shadow:0 6px 14px rgba(0,0,0,0.07); transition: transform .25s ease; }
-  .feature-card .gallery img:hover { transform: scale(1.02); }
-  @media (max-width: 767.98px) { .feature-card { padding:20px; } }
-  /* About section - modern card */
-  .about-card { background:#ffffff; border-radius:18px; box-shadow:0 14px 32px rgba(0,0,0,0.08); padding:32px; position:relative; overflow:hidden; }
-  .about-card::before { content:""; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#e5c674,#f1e2b8,#e5c674); }
-  .about-title { color:#1f5133; }
-  .about-img { border-radius:16px; box-shadow:0 12px 28px rgba(0,0,0,0.15); }
-  @media (max-width: 767.98px) { .about-card { padding:20px; } }
-  /* Modern timings cards */
-  .timings-grid .timing-card { background:#ffffff; border-radius:18px; box-shadow:0 10px 26px rgba(0,0,0,0.08); padding:26px; height:100%; text-align:center; position:relative; overflow:hidden; border:1px solid rgba(0,0,0,0.04); }
-  .timings-grid .timing-card::before { content:""; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#e5c674,#f1e2b8,#e5c674); }
-  .timings-grid .timing-emblem { width:44px; height:44px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#f9e7bb,#f3d180); color:#7a5c1e; margin-bottom:14px; box-shadow:0 8px 18px rgba(229,198,116,0.35); }
-  .timings-grid .timing-title { font-weight:800; color:#9b0b55; }
-  .timings-grid .timing-sub { color:#444; margin-top:6px; }
-  @media (max-width: 767.98px) { .timings-grid .timing-card { padding:18px; } }
-  /* Churches gallery - modern layout */
-  .churches-section { background: #fafbfc; padding: 60px 0; }
-  .church-card { background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%); border-radius:24px; box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 8px 20px rgba(0,0,0,0.05); padding:40px; margin-bottom:50px; position:relative; border: 1px solid rgba(255,255,255,0.8); }
-  .church-card::before { content:""; position:absolute; top:-2px; left:-2px; right:-2px; bottom:-2px; background: linear-gradient(45deg, #e5c674, #f1e2b8, #e5c674, #f1e2b8); border-radius:26px; z-index:-1; }
-  .church-title { color:#2c3e50; margin-bottom:12px; font-weight:700; letter-spacing:-0.5px; }
-  .church-subtitle { color:#7f8c8d; margin-bottom:32px; font-weight:400; }
-  .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; }
-  .gallery-item { position:relative; border-radius:20px; overflow:hidden; box-shadow:0 12px 32px rgba(0,0,0,0.15); transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1); background:#fff; }
-  .gallery-item:hover { transform:translateY(-8px) scale(1.02); box-shadow:0 20px 50px rgba(0,0,0,0.2); }
-  .gallery-item img { width:100%; height:280px; object-fit:cover; transition:transform 0.4s ease; }
-  .gallery-item:hover img { transform:scale(1.05); }
-  @media (max-width: 767.98px) { .church-card { padding:24px; margin-bottom:40px; } .gallery-grid { grid-template-columns:1fr; gap:16px; } }
-</style>
-
-<style>
-  #merged-section {
-    background-color: #ebf7d9;
-    padding: 50px 0;
-  }
-
-  .cg_mrc_widget {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-
-  /* Center the social media section */
-  .social-list {
-    display: flex;
-    justify-content: center; /* Center the icons horizontally */
-    margin-top: 20px;
-  }
-
-  .iconfont-wrapper {
-    margin-right: 15px;
-    font-size: 2rem; /* Adjust icon size */
-    border-radius: 50%;
-    padding: 15px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-
-  /* Social icon hover effects */
-  .iconfont-wrapper.bg-facebook {
-    background-color: #3b5998; /* Facebook Blue */
-  }
-  
-  .iconfont-wrapper.bg-twitter {
-    background-color: #00acee; /* Twitter Blue */
-  }
-
-  .iconfont-wrapper.bg-instagram {
-    background-color: #e1306c; /* Instagram Pink */
-  }
-
-  /* Hover effect for icons */
-  .iconfont-wrapper:hover {
-    transform: scale(1.2); /* Slight enlargement on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  }
-
-  /* Hover effect for social icon colors */
-  .social-list .socicon {
-    color: white; /* White icon color */
-    transition: color 0.3s ease;
-  }
-
-  .social-list .bg-facebook:hover .socicon {
-    color: #3b5998;
-  }
-
-  .social-list .bg-twitter:hover .socicon {
-    color: #00acee;
-  }
-
-  .social-list .bg-instagram:hover .socicon {
-    color: #e1306c;
-  }
-
-  /* Center the title */
-  .mbr-section-title {
-    font-size: 2.5rem;
-    color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-  }
-
-  .mbr-section-title:hover {
-    color: #92ace5; /* Change color when hovering over the title */
-    cursor: pointer;
-  }
-  /* Override old blinking and add clean feast styles */
-  .feast-title { animation: none !important; }
-  .feast-section { background: #f7f4ec; padding: 60px 0; }
-  .countdown-grid { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 16px; justify-items: center; margin-bottom: 24px; }
-  .count-box { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 12px 8px; width: 100%; text-align: center; }
-  .count-label { font-size: 0.9rem; color: #6c757d; display: block; margin-top: 4px; }
-  @media (max-width: 767.98px) { .countdown-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); } }
-  /* Align generated countdown under labels */
-  .countdown-grid .countdown { grid-column: 1 / -1; margin-top: 8px; }
-  .countdown .row { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 16px; justify-items: center; }
-  .countdown .col-3 { width: 100%; max-width: none; padding: 0; }
-  .countdown .number-wrap { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 12px 8px; width: 100%; text-align: center; }
-  .countdown .period, .countdown .dot { display: none; }
-  .countdown .number { line-height: 1; }
-  /* Inline Xd Yh Zm As format for feast section */
-  .feast-section .countdown-grid { display: flex; justify-content: center; }
-  .feast-section .countdown-grid .count-box { display: none; }
-  .feast-section .countdown { display: block; }
-  .feast-section .countdown .row { display: flex; gap: 28px; justify-content: center; align-items: center; flex-wrap: wrap; }
-  .feast-section .countdown .col-3 { width: auto; padding: 8px 18px; background: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
-  .feast-section .countdown .number-wrap { background: transparent; box-shadow: none; padding: 0; }
-  .feast-section .countdown .period, .feast-section .countdown .dot { display: none !important; }
-  .feast-section .countdown .number { display: inline-block; line-height: 1; font-variant-numeric: tabular-nums; }
-  .feast-section .countdown .number b { font-weight: 700; }
-  .feast-section .countdown .col-3:nth-child(1) .number b::after { content: 'd'; margin-left: 8px; font-size: 0.5em; position: relative; top: -0.25em; color: #1f5133; }
-  .feast-section .countdown .col-3:nth-child(2) .number b::after { content: 'h'; margin-left: 8px; font-size: 0.5em; position: relative; top: -0.25em; color: #1f5133; }
-  .feast-section .countdown .col-3:nth-child(3) .number b::after { content: 'm'; margin-left: 8px; font-size: 0.5em; position: relative; top: -0.25em; color: #1f5133; }
-  .feast-section .countdown .col-3:nth-child(4) .number b::after { content: 's'; margin-left: 8px; font-size: 0.5em; position: relative; top: -0.25em; color: #1f5133; }
-  @media (max-width: 767.98px) {
-    .feast-section .countdown .row { gap: 16px; }
-    .feast-section .countdown .col-3 { padding: 6px 12px; }
-  }
-     /* Hidden placeholders for countdown script */
-   .countdown-placeholders { display: none; }
-   
-   /* Virtual Tour Section - Modern Elegant Design */
-   .virtual-tour-section { 
-     position: relative; 
-     min-height: 100vh; 
-     display: flex; 
-     align-items: center; 
-     background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
-     overflow: hidden;
-   }
-   .virtual-tour-section::before { 
-     content: ""; 
-     position: absolute; 
-     top: 0; 
-     left: 0; 
-     right: 0; 
-     bottom: 0; 
-     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.02)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>'); 
-     opacity: 0.3; 
-   }
-   .virtual-tour-section .mbr-overlay { 
-     background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%); 
-   }
-   .virtual-tour-content { 
-     position: relative; 
-     z-index: 2; 
-   }
-   .tour-badge { 
-     display: inline-block; 
-     margin-bottom: 2rem; 
-   }
-   .badge-text { 
-     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
-     color: #2c3e50; 
-     padding: 8px 24px; 
-     border-radius: 25px; 
-     font-size: 0.9rem; 
-     font-weight: 600; 
-     letter-spacing: 1px; 
-     text-transform: uppercase; 
-     box-shadow: 0 4px 15px rgba(229,198,116,0.3); 
-   }
-   .tour-main-title { 
-     color: #ffffff; 
-     font-weight: 800; 
-     letter-spacing: -2px; 
-     text-shadow: 0 6px 30px rgba(0,0,0,0.7); 
-     margin-bottom: 1.5rem; 
-     line-height: 1.1; 
-   }
-   .title-line-1 { 
-     display: block; 
-     font-size: 3.5rem; 
-     margin-bottom: 0.5rem; 
-   }
-   .title-line-2 { 
-     display: block; 
-     font-size: 4rem; 
-     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
-     -webkit-background-clip: text; 
-     -webkit-text-fill-color: transparent; 
-     background-clip: text; 
-   }
-   .tour-subtitle { 
-     color: #e8f4f8; 
-     font-size: 1.3rem; 
-     font-weight: 400; 
-     line-height: 1.6; 
-     margin-bottom: 3rem; 
-     text-shadow: 0 2px 10px rgba(0,0,0,0.5); 
-     max-width: 600px; 
-     margin-left: auto; 
-     margin-right: auto; 
-   }
-   .tour-locations { 
-     display: grid; 
-     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-     gap: 2rem; 
-     margin-bottom: 3rem; 
-     max-width: 900px; 
-     margin-left: auto; 
-     margin-right: auto; 
-   }
-   .location-item { 
-     background: rgba(255,255,255,0.1); 
-     backdrop-filter: blur(10px); 
-     border-radius: 20px; 
-     padding: 2rem; 
-     text-align: center; 
-     border: 1px solid rgba(255,255,255,0.2); 
-     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-     position: relative; 
-     overflow: hidden; 
-   }
-   .location-item::before { 
-     content: ""; 
-     position: absolute; 
-     top: 0; 
-     left: 0; 
-     right: 0; 
-     height: 3px; 
-     background: linear-gradient(90deg, #e5c674, #f1e2b8, #e5c674); 
-   }
-   .location-item:hover { 
-     transform: translateY(-10px); 
-     background: rgba(255,255,255,0.15); 
-     box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
-   }
-   .location-icon { 
-     width: 60px; 
-     height: 60px; 
-     border-radius: 15px; 
-     display: inline-flex; 
-     align-items: center; 
-     justify-content: center; 
-     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
-     color: #2c3e50; 
-     margin-bottom: 1rem; 
-     box-shadow: 0 8px 20px rgba(229,198,116,0.4); 
-     font-size: 1.5rem; 
-   }
-   .location-name { 
-     color: #ffffff; 
-     font-size: 1.3rem; 
-     font-weight: 700; 
-     margin-bottom: 0.5rem; 
-   }
-   .location-desc { 
-     color: #b8d4e3; 
-     font-size: 0.95rem; 
-     line-height: 1.5; 
-   }
-   .btn-tour-start { 
-     background: linear-gradient(135deg, #e5c674 0%, #f1e2b8 100%); 
-     color: #2c3e50; 
-     border: none; 
-     border-radius: 50px; 
-     padding: 18px 36px; 
-     font-size: 1.1rem; 
-     font-weight: 600; 
-     display: inline-flex; 
-     align-items: center; 
-     gap: 12px; 
-     box-shadow: 0 8px 25px rgba(229,198,116,0.4); 
-     transition: all 0.3s ease; 
-     cursor: pointer; 
-     text-decoration: none; 
-   }
-   .btn-tour-start:hover { 
-     transform: translateY(-3px); 
-     box-shadow: 0 12px 35px rgba(229,198,116,0.5); 
-     color: #2c3e50; 
-     text-decoration: none; 
-   }
-   .btn-icon { 
-     width: 24px; 
-     height: 24px; 
-     display: flex; 
-     align-items: center; 
-     justify-content: center; 
-   }
-   @media (max-width: 767.98px) { 
-     .virtual-tour-section { min-height: 80vh; } 
-     .title-line-1 { font-size: 2.5rem; } 
-     .title-line-2 { font-size: 3rem; } 
-     .tour-subtitle { font-size: 1.1rem; } 
-     .tour-locations { grid-template-columns: 1fr; gap: 1.5rem; } 
-     .location-item { padding: 1.5rem; } 
-     .btn-tour-start { padding: 16px 32px; font-size: 1rem; } 
-   }
- </style>
+ 
 
 
   
@@ -433,7 +54,7 @@
   <section data-bs-version="5.1" class="menu menu2 cid-uiQCEUHw36" once="menu" id="menu-5-uiQCEUHw36">
 	
 
-	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg modern-navbar">
 		<div class="container">
 			<div class="navbar-brand">
 				<span class="navbar-logo">
@@ -441,41 +62,72 @@
 						<img src="assets/images/mylogo-1-192x256.png" alt="st michael valai" style="height: 4.3rem;">
 					</a>
 				</span>
-				<span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="index.html">St. Michael Church <br> Vazhaithottam</a></span>
+				<span class="navbar-caption-wrap">
+					<a class="navbar-caption text-black display-4" href="index.html">
+						<span class="nav-title-main">St. Michael Church</span>
+						<span class="nav-title-sub">Vazhaithottam</span>
+					</a>
+				</span>
 			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler modern-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<div class="hamburger">
-					<span></span>
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-						<a class="nav-link link text-black display-4" href="index.html">Home</a>
+				<ul class="navbar-nav nav-dropdown modern-nav-menu" data-app-modern-menu="true">
+					<li class="nav-item">
+						<a class="nav-link link text-black display-4" href="index.html">
+							<span class="nav-link-text">Home</span>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link link text-black text-primary display-4" href="gallery.html" aria-expanded="false">Gallery</a>
+						<a class="nav-link link text-black text-primary display-4" href="gallery.html" aria-expanded="false">
+							<span class="nav-link-text">Gallery</span>
+						</a>
 					</li>
-          
-          <li class="nav-item">
-            <a class="nav-link link text-black text-primary display-4" href="info.html">Infos</a>
-          </li>
-					
-          
-          
-          <li class="nav-item dropdown">
-						<a class="nav-link link text-black dropdown-toggle display-4" href="info.html" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Download</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown-847"><a class="text-black dropdown-item text-primary display-4" href="assets/files/St.-MichaelHistory.pdf">History of St. Michael<br></a>
-              <a class="text-black dropdown-item text-primary display-4" href="assets/files/Vazhaithottam-History.pdf">History of Vazhai<br></a>
-              <a class="text-black dropdown-item text-primary display-4" href="assets/files/First-SundayPrayer.pdf">First Sunday Prayer</a>
-              <a class="text-black show dropdown-item text-primary display-4" href="assets/files/St.Michaels-Prayers.pdf">St. Michael's Prayers</a></div>
+					<li class="nav-item">
+						<a class="nav-link link text-black text-primary display-4" href="info.html">
+							<span class="nav-link-text">Infos</span>
+						</a>
 					</li>
-        
-          <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="https://www.youtube.com/@st.michealchurchvalaithott3520">YouTube</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="contact.html">Contact</a></li></ul>
-				
-				</div>
+					<li class="nav-item dropdown">
+						<a class="nav-link link text-black dropdown-toggle display-4" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+							<span class="nav-link-text">Download</span>
+						</a>
+						<div class="dropdown-menu modern-dropdown">
+							<a class="dropdown-item" href="assets/files/St.-MichaelHistory.pdf">
+								<span class="dropdown-icon"><i class="fas fa-file-pdf"></i></span>
+								<span class="dropdown-text">History of St. Michael</span>
+							</a>
+							<a class="dropdown-item" href="assets/files/Vazhaithottam-History.pdf">
+								<span class="dropdown-icon"><i class="fas fa-file-pdf"></i></span>
+								<span class="dropdown-text">History of Vazhai</span>
+							</a>
+							<a class="dropdown-item" href="assets/files/First-SundayPrayer.pdf">
+								<span class="dropdown-icon"><i class="fas fa-file-pdf"></i></span>
+								<span class="dropdown-text">First Sunday Prayer</span>
+							</a>
+							<a class="dropdown-item" href="assets/files/St.Michaels-Prayers.pdf">
+								<span class="dropdown-icon"><i class="fas fa-file-pdf"></i></span>
+								<span class="dropdown-text">St. Michael's Prayers</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link text-black text-primary display-4" href="https://www.youtube.com/@st.michealchurchvalaithott3520">
+							<span class="nav-link-text">YouTube</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link text-black text-primary display-4 nav-contact-btn" href="contact.html">
+							<span class="nav-link-text">Contact</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 </section>
@@ -484,26 +136,37 @@
 <section data-bs-version="5.1" class="header18 cid-uiQCEUHWL3 mbr-fullscreen mbr-parallax-background" id="hero-15-uiQCEUHWL3">
   
 
-  <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);"></div>
+  <div class="mbr-overlay" style="opacity: 0.6; background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);"></div>
   <div class="container-fluid">
-    <div class="row">
-      <div class="content-wrap col-12 col-md-7">
-        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
-          <strong>St. Michael The Archangel's Church,<br> Vazhaithottam</strong></h1>
-        
-        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">“நீர் செல்லும் இடமெல்லாம் உன்னைக் காக்கும்படி, தம் தூதர்க்கு அவர் கட்டளையிடுவார். அவர்கள் தங்கள் கைகளில் உம்மைத் தாங்கிக்கொள்வர்.” <br>(திபா 91:11-12)</p>
-        <div class="alert-download">
-          <i class="fas fa-exclamation-circle alert-icon"></i>
-          <a href="assets/files/FeastInvitation.pdf" download>Download Feast Invitation</a>
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-12 col-lg-8 col-xl-6">
+        <div class="hero-content text-center">
+          <h1 class="hero-title mbr-fonts-style mb-4 display-1">
+            <span class="title-line-1">St. Michael</span>
+            <span class="title-line-2">The Archangel's Church</span>
+            <span class="title-line-3">Vazhaithottam</span>
+          </h1>
+          <div class="hero-divider mb-4"></div>
+          <p class="hero-subtitle mbr-fonts-style mb-4 display-6">
+            "நீர் செல்லும் இடமெல்லாம் உன்னைக் காக்கும்படி, தம் தூதர்க்கு அவர் கட்டளையிடுவார். அவர்கள் தங்கள் கைகளில் உம்மைத் தாங்கிக்கொள்வர்."
+          </p>
+          <p class="hero-verse mbr-fonts-style mb-5 display-7">(திபா 91:11-12)</p>
+          <div class="hero-cta">
+            <a href="assets/files/FeastInvitation.pdf" download class="btn-feast-download">
+              <span class="btn-icon">
+                <i class="fas fa-download"></i>
+              </span>
+              <span class="btn-text">Download Feast Invitation</span>
+            </a>
+          </div>
         </div>
       </div>
-       <!-- Red Alert Icon for Feast Invitation Download -->
-     
-
     </div>
   </div>
 
 </section>
+
+
 <section data-bs-version="5.1" class="article2 cid-uiQCEUIg7f" id="about-me-2-uiQCEUIg7f">
 	<div class="container">
 		<div class="about-card">
@@ -997,6 +660,20 @@
   </div>
 </section>
 
+<!-- <section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;">
+  <a href="index.html" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;">
+  <img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+</a>
+<p style="margin: 0;text-align: center;" class="display-7">&#8204;</p>
+<a style="z-index:1" href="index.html"> </a>
+</section> -->
+
+<script src="assets/parallax/jarallax.js"></script>  
+<script src="assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="assets/ytplayer/index.js"></script>  
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="assets/countdown/countdown.js"></script>  
+<script src="assets/theme/js/script.js"></script>  
 
 
 
