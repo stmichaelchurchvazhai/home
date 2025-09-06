@@ -119,9 +119,8 @@
   .location-item { padding: 20px; }
   .btn-tour-start { padding: 16px 28px; font-size: 1.1rem; }
 }
-</style>
 
-<style>
+
 #merged-section {
 background-color: #ebf7d9;
 padding: 50px 0;
@@ -300,8 +299,77 @@ cursor: pointer;
     .feast-section .countdown .row { gap: 16px; }
     .feast-section .countdown .col-3 { padding: 6px 12px; }
   }
-     /* Hidden placeholders for countdown script */
-   .countdown-placeholders { display: none; }
+     /* Sliding Gallery Styles */
+.gallery-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.grid-container-3 {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.grid-item {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Ensure images are visible */
+.grid-item img.hidden {
+  display: block !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-item {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .grid-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    width: 150px;
+    height: 120px;
+  }
+  
+  .grid-container {
+    height: 150px;
+  }
+}
    
    /* Virtual Tour Section - Modern Elegant Design */
    .virtual-tour-section { 
