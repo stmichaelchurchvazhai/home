@@ -257,11 +257,40 @@ cursor: pointer;
   .btn-feast-download:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6); color: #2c3e50; text-decoration: none; border-color: #ffffff; }
   .btn-icon { font-size: 1.3rem; }
   .btn-text { font-weight: 600; }
-  @media (max-width: 767.98px) { 
-    .hero-content { padding: 20px 15px; }
-    .title-line-1 { font-size: 2.8rem; }
-    .title-line-2 { font-size: 2.2rem; }
-    .title-line-3 { font-size: 1.8rem; letter-spacing: 2px; }
+  
+  /* Hero Section Mobile Fixes */
+  @media (max-width: 767px) {
+    .cid-uiQCEUHWL3 {
+      background-image: url("../../../assets/images/lander-mobile-view.jpg") !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-attachment: scroll !important;
+      min-height: 100vh;
+    }
+    
+    /* Ensure proper image scaling on mobile */
+    .cid-uiQCEUHWL3 .mbr-fallback-image {
+      background-image: url("../../../assets/images/lander-mobile-view.jpg") !important;
+      background-size: cover !important;
+      background-position: center center !important;
+    }
+    
+    /* Adjust hero content for mobile */
+    .hero-content {
+      padding: 20px 15px !important;
+    }
+    
+    .title-line-1 { 
+      font-size: 2.5rem !important; 
+    }
+    .title-line-2 { 
+      font-size: 2rem !important; 
+    }
+    .title-line-3 { 
+      font-size: 1.5rem !important; 
+      letter-spacing: 1px !important;
+    }
+    
     .hero-subtitle { font-size: 1.1rem; line-height: 1.6; }
     .hero-verse { font-size: 1rem; }
     .btn-feast-download { padding: 16px 28px; font-size: 1.1rem; }
