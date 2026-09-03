@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stmichaelchurchvazhai.co.in/sitemap.xml

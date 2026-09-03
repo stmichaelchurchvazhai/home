@@ -1,3 +1,14 @@
+.cid-uiQCEUKQ0u .bg-youtube {
+    background: #ff0000;
+    color: #ffffff;
+}
+.cid-uiQCEUKQ0u .bg-youtube:hover {
+    background: #cc0000;
+}
+.text-accent {
+    color: #1f5133;
+}
+
 .modern-list {
     font-family: 'Roboto', sans-serif;
     color: #f0e6e6;
