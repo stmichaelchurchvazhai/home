@@ -9,6 +9,13 @@
     color: #1f5133;
 }
 
+@media (max-width: 991px) {
+    .cid-uiQCEUHw36 .navbar-collapse.show {
+        z-index: 1050 !important;
+        background: #ffffff !important;
+    }
+}
+
 .modern-list {
     font-family: 'Roboto', sans-serif;
     color: #f0e6e6;
