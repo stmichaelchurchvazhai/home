@@ -1,0 +1,25 @@
+{
+  "name": "St. Michael Church Vazhaithottam",
+  "short_name": "St. Michael Church",
+  "description": "St. Michael Church, Vazhaithottam — Mass timings, feast schedule, history and contact information.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1f5133",
+  "theme_color": "#1f5133",
+  "lang": "ta",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
